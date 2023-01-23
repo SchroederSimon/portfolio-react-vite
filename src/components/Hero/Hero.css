@@ -1,0 +1,134 @@
+.heroContainer {
+    width: 100%;
+    height: 88vh;
+    color: var(--colorWhite);
+    display: flex;
+    align-items: center;
+}
+
+.heroText h2 {
+    font-size: 3em;
+    color: var(--softRed);
+}
+
+.heroText p {
+    font-size: 1.5em;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    line-height: 1.6;
+    width: 70%;
+}
+
+.heroText {
+    width: 100%;
+}
+
+
+/*BLOB*/
+.heroWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+
+.heroWrap a {
+    text-decoration: none;
+    color: var(--colorWhite);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    display: flex;
+    padding: 15px 30px;
+}
+
+.heroWrap button {
+    z-index: 1;
+    position: absolute;
+    box-shadow: 3px 4px 0px 0px var(--softBlue);
+    background-color: transparent;
+    border-radius: 12px;
+    border: 2px solid;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--colorWhite);
+    font-size: 17px;
+    text-decoration: none;
+
+}
+
+.heroWrap button:hover {
+    transition: 1s;
+    background-color: var(--softRed);
+    border: 2px solid var(--colorWhite);
+}
+
+
+.circle {
+    width: 470px;
+    height: 500px;
+    border: 2px solid var(--softBlue);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    overflow: hidden;
+    animation: morph 3s linear infinite;
+    transform: rotate(25deg);
+}
+
+.circle2 {
+    position: absolute;
+    width: 510px;
+    height: 410px;
+    border: 2px solid var(--colorWhite);
+    border-radius: 20% 10% 80% 50% / 40% 60% 70% 30%;
+    overflow: hidden;
+    animation: morph 5s linear infinite;
+    transform: rotate(45deg);
+}
+
+.circle3 {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    border: 2px solid #F87060;
+    border-radius: 10% 30% 40% 20% / 10% 20% 70% 30%;
+    overflow: hidden;
+    animation: morph 5s linear infinite;
+    transform: rotate(45deg);
+}
+
+.circle4 {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #D9D9D9;
+    border-radius: 10% 30% 40% 20% / 10% 20% 70% 30%;
+    overflow: hidden;
+    animation: morph 5s linear infinite;
+    transform: rotate(240deg);
+}
+
+
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+
+    34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+}
+
+@media(max-width: 666px) {
+
+    .wrap {
+        display: none;
+    }
+
+}
