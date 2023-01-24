@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ProjectsInterface } from '../../models/interface';
+import { ProjectsInterface } from '../../models/bigProjectInterface';
 import '../../components/Projects/Project.css';
 
 
@@ -43,15 +43,15 @@ function Projects() {
                         <div className="projectGrid1">
                             <div className="projectMedia">
                                 <iframe width="100%" height="1080" src={proyecto.videoLink}
-                title="Project portfolio for Argentina Programa stage 2" frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen></iframe>
+                                    title="Project portfolio for Argentina Programa stage 2" frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen></iframe>
 
                             </div>
                             <div className="projectLeftInfo">
                                 <div className="projectTitle">
-                                    <a href="{{project.linkDeploy}}" target="_blank"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    <a href="{{project.linkGit}}" target="_blank"><i className="fa-brands fa-github"></i></a>
+                                    <a href={proyecto.linkDeploy} target="_blank"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    <a href={proyecto.linkGit} target="_blank"><i className="fa-brands fa-github"></i></a>
                                     <h3>{proyecto.title}</h3>
                                     <h2>{proyecto.name}</h2>
                                 </div>
@@ -63,55 +63,12 @@ function Projects() {
                                 </div>
                             </div>
                         </div>
-
                     )
                 })
             }
-
         </div>
     )
 }
 
 export default Projects;
 
-
-
-// <div className="container">
-
-// {
-//     projects.map(proyecto => {
-//         return (
-            
-
-//         )
-//     })
-// }
-
-//     <div className="text">
-//         <h1>More things I've built</h1>
-//     </div>
-//     <div className="grid2">
-//             <div className="cardContainer">
-//                 <div className="information">
-//                     <a href="" target="_blank"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
-//                     <h2>{{projects2.name2}}</h2>
-//                     <p>{{projects2.description2}}</p>
-//                     <img [src]="projects2.image2" alt="">
-//                     <p>{{projects2.used}}</p>
-//                 </div>
-//             </div>
-//     </div>
-//     <div className="text">
-//         <h1>Check out my board!</h1>
-//     </div>
-//     <div className="miroBoard">
-//         <p>This is my board on miro! it's a great tool for organice information.
-//             I use it for make fast designs (combined with figma) write down my
-//             ideas for future projects and also to make resumees of what im learning
-//             about programming (angular, ts, js, etc.).
-//             I decided to show this board here so you can observ what im currently
-//             doing and i think you can make some conclusions about me :)
-//         </p>
-//         <iframe width="800" height="600" src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" frameborder="0" scrolling="no" allowfullscreen></iframe>
-//     </div>
-// </div>

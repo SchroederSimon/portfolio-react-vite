@@ -8,9 +8,7 @@ function Hero() {
                 <div className="heroText">
                     <p>Hi, my name is</p>
                     <h2>Simon Schroeder</h2>
-                    <p>I'm a self-taught front end developer
-                        and also studied industrial design
-                        for 5 years.</p>
+                    <p>I am a self-taught front end developer with a passion for design.</p>
                 </div>
                 <div className="heroWrap">
                     <button><a href="https://www.w3schools.com" target="_blank">RESUME</a></button>

@@ -1,0 +1,108 @@
+
+.smallProjectContainer{
+    width: 100%;
+    color: var(--colorWhite);
+}
+/* Grid */
+.projectGrid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+    padding-bottom: 5%;
+}
+
+.cardContainer {
+    background-color: var(--colorWhiteDescription);
+    color: black;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin-top: 30px;
+    filter: drop-shadow(0.3rem 0.3rem 0rem var(--softBlue));
+}
+
+.cardContainer:hover {
+    transition: 1s;
+    scale: 1.1;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    padding: 20px 20px 0px 20px;
+    line-height: 1.5em;
+    gap: 15px;
+}
+
+.information h2 {
+    align-self: flex-start;
+}
+
+.information img {
+    width: 100%;
+}
+
+.information a {
+    font-size: 1.5em;
+    align-self: flex-end;
+    text-decoration: none;
+    color: var(--softBlue);
+}
+
+.information a:hover {
+    color: var(--softRed);
+}
+
+.miroBoard {
+    display: flex;
+    margin-top: 30px;
+}
+
+.miroBoard p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    width: 50%;
+    padding: 0 2% 0 0;
+}
+.text h1{
+    font-size: 2em;
+    color: var(--softRed);
+}
+.text h1::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    width: 42%;
+    height: 1px;
+    background-color: var(--colorWhite);
+}
+
+@media(max-width: 900px) {
+    .grid2 {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    h1::after {
+        display: none;
+    }
+
+    .grid1 {
+        grid-template-columns: fit-content(50%);
+    }
+
+    .media {
+        display: none;
+    }
+
+    .miroBoard p {
+        width: 100%;
+    }
+
+    .miroBoard iframe {
+        display: none;
+    }
+}

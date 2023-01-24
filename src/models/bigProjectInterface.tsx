@@ -4,6 +4,6 @@ export interface ProjectsInterface {
     description: string
     videoLink?: any
     icons: string
-    linkGit: string | number
-    linkDeploy?: string | number
+    linkGit: string
+    linkDeploy?: string 
 }

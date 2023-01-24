@@ -30,10 +30,6 @@
     align-items: center;
 }
 
-.projectGrid1 a:hover {
-    filter: brightness(50%);
-}
-
 .projectLeftInfo {
     grid-area: 1 / 9 / 6 / 13;
     text-align: right;
@@ -41,6 +37,18 @@
 
 .projectTitle {
     margin-bottom: 20px;
+}
+
+.projectTitle a {
+    font-size: 1.5em;
+    align-self: flex-end;
+    text-decoration: none;
+    color: var(--softBlue);
+    padding: 1%;
+}
+
+.projectTitle a:hover {
+    color: var(--softRed);
 }
 
 .projectDescription {
@@ -55,7 +63,7 @@
     filter: drop-shadow(0.4rem 0.4rem 0rem var(--softBlue));
 }
 
-.projectIcons img{
+.projectIcons img {
     width: 50%;
 }
 
@@ -73,3 +81,4 @@
 .projectMedia iframe {
     height: 70vh;
 }
+
