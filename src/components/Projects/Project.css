@@ -9,17 +9,6 @@
     color: var(--softRed);
 }
 
-/* White lines */
-.projectText h1::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    width: 42%;
-    height: 1px;
-    background-color: var(--colorWhite);
-}
-
 /* Grid big projects */
 .projectGrid1 {
     display: grid;

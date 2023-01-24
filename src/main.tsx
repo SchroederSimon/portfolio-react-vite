@@ -9,7 +9,9 @@ import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Sidebar from './components/Sidebar/Sidebar'
 import SmallProjects from './components/SmallProjects/SmallProjects'
-import Skills from './components/About/About'
+import Skills from './components/Skills/Skills'
+import About from './components/About/About'
+
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -20,5 +22,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Projects />
     <SmallProjects />
     <Skills />
+    <About />
   </React.StrictMode>,
 )

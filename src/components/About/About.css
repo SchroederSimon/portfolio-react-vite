@@ -3,47 +3,34 @@
     height: auto;
     padding-bottom: 100px;
 }
-.aboutText h1{
-    font-size: 2em;
-    color: var(--softRed);
-}
-/* White line */
-.aboutText h1::after{
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    width: 60%;
-    height: 1px;
-    background-color: var(--colorWhite);
-}
 
 .aboutDescription {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
 .aboutDescription p {
-    grid-area: 1 / 1 / 4 / 4;
+    grid-area: 1 / 1 / 2 / 2;
     font-size: 1.2em;
     line-height: 1.6;
     color: var(--colorWhite);
-    margin-right: 50px;
+    width: 90%;
+    
 }
 
-.aboutSkills img {
-    grid-area: 1 / 4 / 5 / 6;
-    height: 50vh;
+.aboutDescription img {
+    grid-area: 1 / 2 / 3 / 3;
+    height: 60vh;
     border-radius: 30px;
     filter: drop-shadow(0.4rem 0.4rem 0rem var(--softBlue));
 }
 
 .aboutSkills{
-    margin-left: 20px;
-    grid-area: 5 / 1 / 2 / 4;
+    grid-area: 2 / 1 / 2 / 2;
     color: var(--colorWhite);
     font-weight: 800;
 }

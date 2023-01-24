@@ -24,3 +24,20 @@ body {
   font-family: 'Montserrat';
 }
 
+h1 {
+  font-size: 2em;
+  color: var(--softRed);
+  position: relative; /* make the h1 a relative positioning context */
+
+}
+
+h1::after {
+  content: "";
+  position: absolute; /* position the line absolutely */
+  margin-left: 50px; /* align the line to the right of the h1 */
+  top: 50%; /* align the line to the middle of the h1 */
+  transform: translateY(-50%); /* center the line vertically */
+  width: 50%; /* make the line as wide as the h1 */
+  height: 1px; /* make the line 1px high */
+  background-color: white; /* set the line color to white */
+}

@@ -67,19 +67,7 @@
     width: 50%;
     padding: 0 2% 0 0;
 }
-.text h1{
-    font-size: 2em;
-    color: var(--softRed);
-}
-.text h1::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    width: 42%;
-    height: 1px;
-    background-color: var(--colorWhite);
-}
+
 
 @media(max-width: 900px) {
     .grid2 {
