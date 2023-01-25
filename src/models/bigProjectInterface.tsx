@@ -1,4 +1,5 @@
 export interface ProjectsInterface {
+    id: number;
     title: string
     name: string
     description: string

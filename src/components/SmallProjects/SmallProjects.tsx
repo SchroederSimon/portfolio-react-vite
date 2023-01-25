@@ -2,19 +2,35 @@ import { useEffect, useState } from 'react';
 import { SmallProjectsInterface } from '../../models/smallProjectInterface';
 import '../../components/SmallProjects/SmallProjects.css';
 import SMALL_PROJECTS from '../../shared/SMALLPROJECTS';
+import { motion } from 'framer-motion';
 
 
 
 function SmallProjects() {
 
     const [smallProject, setSmallProjects] = useState<SmallProjectsInterface[]>([])
-
+    const itemVariants = {
+        open: {
+            opacity: 1,
+            x: 0,
+        },
+        closed: {
+            opacity: 0,
+            x: "-50%"
+        },
+    }
+    
     useEffect(() => {
         setSmallProjects(SMALL_PROJECTS)
     }, [])
 
     return (
-        <div className="smallProjectContainer">
+        <motion.div 
+        variants={itemVariants}
+        initial="closed"
+        animate="open"
+        transition={{ duration: 5}}
+        className="smallProjectContainer">
             <div className="projectText">
                 <h1>More things I've built</h1>
             </div>
@@ -53,7 +69,7 @@ function SmallProjects() {
                 </p>
                 <iframe width="800" height="600" src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" frameBorder="0" scrolling="no" allowFullScreen></iframe>
             </div>
-        </div>
+        </motion.div>
 
     )
 }
