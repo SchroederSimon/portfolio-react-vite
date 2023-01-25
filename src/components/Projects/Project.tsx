@@ -15,7 +15,7 @@ function Projects() {
     return (
         <div className="projectContainer">
             <div className="projectText">
-                <h1>Some things I've built</h1>
+                <h1>Projects I've built</h1>
             </div>
             {
                 projects.map(proyecto => {

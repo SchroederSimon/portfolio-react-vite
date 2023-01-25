@@ -48,7 +48,6 @@
 .information a {
     font-size: 1.5em;
     align-self: flex-end;
-    text-decoration: none;
     color: var(--softBlue);
 }
 

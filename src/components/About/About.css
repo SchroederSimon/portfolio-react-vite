@@ -19,7 +19,6 @@
     line-height: 1.6;
     color: var(--colorWhite);
     width: 90%;
-    
 }
 
 .aboutDescription img {
@@ -33,6 +32,8 @@
     grid-area: 2 / 1 / 2 / 2;
     color: var(--colorWhite);
     font-weight: 800;
+    width: 100%;
+
 }
 .aboutSkills span{
     font-weight: 400;
