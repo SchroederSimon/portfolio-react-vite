@@ -19,7 +19,8 @@ function Skills() {
                 {
                     skills.map(skill => {
                         return (
-                            <div className="skillsImage">
+                            <div key={skill.id}
+                            className="skillsImage">
                                 <img src={skill.imageUrl} alt="" className="iconsSkill" />
                                 <div className="imageOverlay imageOverlay--primary">
                                     <div className="imageTitle">

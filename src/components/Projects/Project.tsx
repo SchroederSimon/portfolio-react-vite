@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ProjectsInterface } from '../../models/bigProjectInterface';
 import '../../components/Projects/Project.css';
 import BIG_PROJECTS from '../../shared/PROJECTS';
 import { motion } from 'framer-motion';
+import useIsVisibleOnScreen from '../../hooks/scrollHook';
 
 
 function Projects() {
@@ -13,35 +14,25 @@ function Projects() {
         setProjects(BIG_PROJECTS)
     }, [])
 
-    const itemVariants = {
-        open: {
-            opacity: 1,
-            x: 0,
-        },
-        closed: {
-            opacity: 0,
-            x: "-50%"
-        },
-    }
+    //Scroll animation
+    const myRef = useRef(null);
+    const [isVisible] = useIsVisibleOnScreen(myRef);
+
     return (
-        <div>
+        <motion.div ref={myRef}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 4 }}>
             <div className="projectContainer">
-                <div className="projectText">
-                    <motion.h1 variants={itemVariants}
-                        initial="closed"
-                        animate="open"
-                        transition={{ duration: 5 }}
-                    >Projects I've built</motion.h1>
-                </div>
+                <motion.div
+
+                    className="projectText">
+                    <h1>Projects I've built</h1>
+                </motion.div>
                 {
                     projects.map((proyecto, i) => {
                         return (
-                            <motion.div
-                                key={proyecto.id}
-                                variants={itemVariants}
-                                initial="closed"
-                                animate="open"
-                                transition={{ duration: 5, delay: i * 0.8 }}
+                            <div
                                 className="projectGrid1">
                                 <div className="projectMedia">
                                     <iframe width="100%" height="1080" src={proyecto.videoLink}
@@ -63,12 +54,12 @@ function Projects() {
                                         <img src={proyecto.icons} alt={`Image for ${proyecto.name}`} />
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         )
                     })
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }
 
