@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react'
 import '../../components/Skills/Skills.css'
+import useIsVisibleOnScreen from '../../hooks/scrollHook';
 import { skillsInterface } from '../../models/skillsInterface';
 import SKILLS from '../../shared/SKILLS';
 
@@ -12,15 +14,26 @@ function Skills() {
         setSkills(SKILLS)
     }, [])
 
+    //Scroll animation
+    const myRef = useRef(null);
+    const [isVisible] = useIsVisibleOnScreen(myRef);
+    
     return (
-        <div className="skillsContainer">
+        <motion.div className="skillsContainer"
+        ref={myRef}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 4 }}
+        >
             <h1>Skills</h1>
             <div className="centerSkills">
                 {
                     skills.map(skill => {
                         return (
-                            <div key={skill.id}
-                            className="skillsImage">
+                            <motion.div key={skill.id}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 8 }}
+                                className="skillsImage">
                                 <img src={skill.imageUrl} alt="" className="iconsSkill" />
                                 <div className="imageOverlay imageOverlay--primary">
                                     <div className="imageTitle">
@@ -30,12 +43,12 @@ function Skills() {
                                         {skill.level}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }
 

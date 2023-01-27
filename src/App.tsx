@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+
+
 
 //Components
 import Projects from './components/Projects/Project'
@@ -9,13 +9,13 @@ import Sidebar from './components/Sidebar/Sidebar'
 import SmallProjects from './components/SmallProjects/SmallProjects'
 import Skills from './components/Skills/Skills'
 import About from './components/About/About'
+import useIsVisibleOnScreen from "./hooks/scrollHook";
 
 
 
 function App() {
-
     return (
-        <div>
+        <>
             <Sidebar />
             <Header />
             <Hero />
@@ -23,9 +23,7 @@ function App() {
             <SmallProjects />
             <Skills />
             <About />
-        </div>
-
-
+        </>
     )
 }
 

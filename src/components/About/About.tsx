@@ -1,10 +1,21 @@
-import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
 import '../../components/About/About.css'
+import useIsVisibleOnScreen from '../../hooks/scrollHook';
 
 function About() {
 
+    //Scroll animation
+    const myRef = useRef(null);
+    const [isVisible] = useIsVisibleOnScreen(myRef);
+    
     return (
-        <div className="aboutContainer">
+        <motion.div className="aboutContainer"
+        ref={myRef}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 4 }}
+        >
             <div className="aboutText">
                 <h1>About Me</h1>
             </div>
@@ -29,7 +40,7 @@ function About() {
                 </div>
                 <img src="src/assets/imagenes/cats.png" alt="" />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

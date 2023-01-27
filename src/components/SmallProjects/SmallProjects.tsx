@@ -18,11 +18,13 @@ function SmallProjects() {
     const [isVisible] = useIsVisibleOnScreen(myRef);
 
     return (
-        <div ref={myRef}>
-            <motion.div
-                animate={{ opacity: isVisible ? 1 : 0 }}
-                initial={{ opacity: 0 }}
-                transition={{ duration: 4 }}
+        <motion.div
+        ref={myRef}
+        animate={{ opacity: isVisible ? 1 : 0 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 4 }}
+        >
+            <div
                 className="smallProjectContainer">
                 <div className="projectText">
                     <h1>More things I've built</h1>
@@ -64,8 +66,8 @@ function SmallProjects() {
                     </p>
                     <iframe width="800" height="600" src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" frameBorder="0" scrolling="no" allowFullScreen></iframe>
                 </div>
-            </motion.div>
-        </div>
+            </div>
+        </motion.div>
     )
 }
 

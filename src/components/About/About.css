@@ -33,7 +33,9 @@
     color: var(--colorWhite);
     font-weight: 800;
     width: 100%;
-
+}
+.aboutSkills ul li{
+    line-height: 1.4;
 }
 .aboutSkills span{
     font-weight: 400;

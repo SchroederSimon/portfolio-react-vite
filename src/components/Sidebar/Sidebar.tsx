@@ -1,19 +1,47 @@
+import { motion } from 'framer-motion';
 import '../../components/Sidebar/Sidebar.css'
+
+const icons = [
+    {
+        id: 1,
+        label: 'Linkedin',
+        link: 'https://www.linkedin.com/in/simon-schroeder-a2847a1b7/',
+        icon: 'fa-linkedin-in',
+    },
+    {
+        id: 2,
+        label: 'Github',
+        link: 'https://github.com/SchroederSimon',
+        icon: 'fa-github',
+    },
+    {
+        id: 3,
+        label: 'Twitter',
+        link: 'https://twitter.com/SimonD3v',
+        icon: 'fa-twitter',
+    },
+];
 
 function Sidebar() {
 
     return (
         <div className="sidebar">
-                <div className="sidebarIcons">
-                    <li><a aria-label="Linkedin" href="https://www.linkedin.com/in/simon-schroeder-a2847a1b7/"
-                        target="_blank"><i className="fa-brands fa-linkedin-in fa-2x"></i></a></li>
-                    <li><a aria-label="Github" href="https://github.com/SchroederSimon" target="_blank"><i
-                        className="fa-brands fa-github fa-2x"></i></a></li>
-                    <li><a aria-label="Twitter" href="https://twitter.com/SimonD3v" target="_blank"><i
-                        className="fa-brands fa-twitter fa-2x"></i></a></li>
-                </div>
+            <div className="sidebarIcons">
+                {icons.map((icon) => (
+                    <motion.li
+                        key={icon.id}
+                        whileHover={{ scale: 1.4 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 8 }}
+                    >
+                        <a aria-label={icon.label} href={icon.link} target="_blank">
+                            <i className={`fa-brands ${icon.icon} fa-2x`} />
+                        </a>
+                    </motion.li>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
 
 export default Sidebar;
+

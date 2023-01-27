@@ -40,6 +40,12 @@ const SKILLS = [
         imageUrl: "src/assets/imagenes/angular.jpg",
     },
     {
+        id: 13,
+        nombre: "React",
+        level: "Intermediate",
+        imageUrl: "src/assets/imagenes/angular.jpg",
+    },
+    {
         id: 7,
         nombre: "Node.js",
         level: "Basic",

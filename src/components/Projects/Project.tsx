@@ -24,15 +24,15 @@ function Projects() {
             initial={{ opacity: 0 }}
             transition={{ duration: 4 }}>
             <div className="projectContainer">
-                <motion.div
+                <div
 
                     className="projectText">
                     <h1>Projects I've built</h1>
-                </motion.div>
+                </div>
                 {
-                    projects.map((proyecto, i) => {
+                    projects.map((proyecto) => {
                         return (
-                            <div
+                            <div key={proyecto.id}
                                 className="projectGrid1">
                                 <div className="projectMedia">
                                     <iframe width="100%" height="1080" src={proyecto.videoLink}
@@ -64,7 +64,3 @@ function Projects() {
 }
 
 export default Projects;
-
-// initial="closed"
-// whileInView="open"
-// viewport={{ once: false }}

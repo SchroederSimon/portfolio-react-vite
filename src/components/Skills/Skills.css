@@ -5,14 +5,15 @@
 
 .centerSkills{
     text-align: center;
+    filter: drop-shadow(0.4rem 0.4rem 0rem #afafaf34);
 }
 
 .skillsImage {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     display: inline-block;
-    margin: 25px 10px;
+    margin: 15px 15px;
 }
 
 .iconsSkill {
@@ -38,14 +39,16 @@
     opacity: 0;
     transition: opacity 0.25s;
 }
-
+.imageDescription{
+    width: 100%;
+}
 .imageOverlay--primary {
-    background: #585858cb;
+    background: #585858e1;
 }
 
 .imageOverlay>* {
-    transform: translateY(10px);
-    transition: transform 1s;
+    transform: translateY(-20px);
+    transition: transform 1.2s;
 }
 
 .imageOverlay:hover {
@@ -53,7 +56,7 @@
 }
 
 .imageOverlay:hover>* {
-    transform: translateY(0);
+    transform: translateY(10px);
 }
 
 .imageTitle {
@@ -63,7 +66,6 @@
 
 .imageDescription {
     font-size: 1.25em;
-    margin-top: 1em;
 }
 
 /* 
