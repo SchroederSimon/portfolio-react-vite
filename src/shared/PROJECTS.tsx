@@ -2,7 +2,7 @@ const BIG_PROJECTS = [
     {
         id: 1,
         title: "Project",
-        name: "CRUD portfolio",
+        name: "CRUD Portfolio",
         description: "Personal website with CRUD (img and text) options after sign in. In this project i learn about APIs, noSQL database (firebase), user authentication, auth guard, make services to manage the requests, do components reutilizables, use toastr to display erros to the user (some feedback), interfaces in Angular, learn CSS, about forms in Angular, made contact form usable with emailjs, learned some SEO too and how to optimize my webpage with lighthouse (google) and finally how to deploy a project through firebase.",
         videoLink: "https://www.youtube.com/embed/vZHDCJfD1rs",
         icons: "src/assets/imagenes/prueba-iconos.png",
@@ -12,10 +12,10 @@ const BIG_PROJECTS = [
     {
         id: 2,
         title: "Project",
-        name: "Crud Cards",
+        name: "CRUD Cards",
         description: "Make cards to write down concepts while you are studying. Another CRUD made it with React - Node (Express) - TypeScript - MongoDB (backend) and HTML, CSS for the front end",
-        videoLink: "https://www.youtube.com/embed/RqXxkUh4DSo",
-        icons: "src/assets/imagenes/todo.png",
+        videoLink: "https://www.youtube.com/embed/3m_ShURPid4",
+        icons: "src/assets/imagenes/reactProject.png",
         linkGit: "https://github.com/SchroederSimon/Cards-React-Vite",
         linkDeploy: ""
     }

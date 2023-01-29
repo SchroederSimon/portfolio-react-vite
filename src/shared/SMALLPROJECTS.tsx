@@ -3,9 +3,9 @@ const SMALL_PROJECTS = [
         id: 1,
         title: "Project",
         name: "Personal portfolio",
-        description: "My personal web portfolio built with React, Vite, and CSS is a sleek, modern, and user-friendly website that showcases my skills and experience as a web developer.",
+        description: "My personal web portfolio built with React, TypeScript, Vite, CSS and framer-motion for animations. Is a sleek, modern, and user-friendly website that showcases my skills and experience as a web developer.",
         image: "src/assets/imagenes/portfolio.png",
-        usedTech: "TS - React - Vite - CSS",
+        usedTech: "TypeScript - React - Vite - CSS - Framer-motion",
         linkGit: "https://github.com/SchroederSimon/portfolio-react-vite"
     },
     {
