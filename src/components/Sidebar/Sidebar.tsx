@@ -25,7 +25,11 @@ const icons = [
 function Sidebar() {
 
     return (
-        <div className="sidebar">
+        <motion.div className="sidebar"
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+        >
             <div className="sidebarIcons">
                 {icons.map((icon) => (
                     <motion.li
@@ -39,7 +43,7 @@ function Sidebar() {
                     </motion.li>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }
 

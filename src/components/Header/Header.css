@@ -1,4 +1,4 @@
-.navBar {
+/* .navBar {
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -15,10 +15,10 @@
     color: var(--colorWhite);
     transition-duration: 0.5s;
     cursor: pointer;
-}
+} */
 
 /* Underline navBar */
-nav ul li::after {
+/* nav ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -29,11 +29,11 @@ nav ul li::after {
 }
 nav ul li:hover::after {
     width: 50%;
-}
+} */
 /* Title */
-.navBar h2{
+/* .navBar h2{
     color: var(--colorWhite);
 }
 .logo span{
     color: var(--softRed);
-}
+} */
