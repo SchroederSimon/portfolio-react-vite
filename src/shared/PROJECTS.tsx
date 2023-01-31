@@ -13,7 +13,7 @@ const BIG_PROJECTS = [
         id: 2,
         title: "Project",
         name: "CRUD Cards",
-        description: "Make cards to write down concepts while you are studying. Another CRUD made it with React - Node (Express) - TypeScript - MongoDB (backend) and HTML, CSS for the front end",
+        description: "Make cards to write down concepts while you are studying. Another CRUD made it with React - Node (Express) - TypeScript - MongoDB (backend) and HTML, CSS for the front end. Learn about endpoints, mongoose, routes, callbacks, project structuration, react hooks and postman for test",
         videoLink: "https://www.youtube.com/embed/3m_ShURPid4",
         icons: "src/assets/imagenes/reactProject.png",
         linkGit: "https://github.com/SchroederSimon/Cards-React-Vite",

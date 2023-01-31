@@ -25,7 +25,6 @@ function Projects() {
             transition={{ duration: 4 }}>
             <div className="projectContainer">
                 <div
-
                     className="projectText">
                     <h1>Projects I've built</h1>
                 </div>

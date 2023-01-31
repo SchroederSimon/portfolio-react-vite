@@ -1,4 +1,4 @@
-.heroContainer{
+.heroContainer {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,42 +7,84 @@
     color: var(--colorWhite);
 }
 
-.heroContentContainer{
+.heroContentContainer {
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     display: inline-flex;
     justify-content: space-around;
 }
 
-.heroContentContainer h2{
-    font-size: 4em;
+.heroContentContainer h2 {
+    font-size: 3.5em;
 }
 
-.heroleft span{
+.heroleft span {
     text-shadow: -1px -1px 0 var(--softBlue), 1px -1px 0 var(--softBlue), -1px 1px 0 var(--softBlue), 1px 1px 0 var(--softBlue);
     color: var(--backgroundBlue);
 }
 
-.heroRight{
+.heroRight {
     text-align: center;
 }
 
-.heroRight h2{
+.heroRight h2 {
     color: var(--softRed);
 }
 
-.heroRight ul{
-    gap: 40px;
-    display: inline-flex;
-    font-size: 1.7em;
+.heroContainer button a {
+    font-weight: 700;
+    color: var(--softRed);
+    text-decoration: none;
 }
-.heroLinks li{
+
+.heroContainer button {
+    margin-top: 15px;
+    bottom: 15%;
+    padding: 2.5%;
+    box-shadow: 3px 4px 0px 0px var(--softBlue);
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--colorWhite);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+/* nav */
+.navbarContainer {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    padding: 1% 0 1% 0;
+    transform: translateX(-50%);
+    width: 100%;
+    color: var(--colorWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    height: auto;
+    background-color: #071222a6;
+    z-index: 9999;
+}
+
+.navbarLinks {
+    gap: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbarLinks li {
     transition: transform 0.5s;
 }
-.heroLinks li:hover{
+
+.navbarLinks li:hover {
     transform: scale(1.2);
 }
-.heroLinks li::after {
+
+.navbarLinks li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -52,26 +94,8 @@
     transition: 0.5s;
     margin-top: 2px;
 }
-.heroLinks li:hover::after {
+
+.navbarLinks li:hover::after {
     width: 100%;
 }
 
-.heroContainer button{
-    position: absolute;
-    bottom: 15%;
-    padding: 1.2%;
-    box-shadow: 3px 4px 0px 0px var(--softBlue);
-    background-color: white;
-    border-radius: 12px;
-    border: 2px solid;
-    cursor: pointer;
-    color: var(--colorWhite);
-    font-size: 17px;
-    text-decoration: none;
-}
-
-.heroContainer button a{
-    font-weight: 800;
-    color: var(--softRed);
-    text-decoration: none;
-}
