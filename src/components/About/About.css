@@ -41,26 +41,3 @@
     font-weight: 400;
     font-style: italic;
 }
-
-/* @media(max-width: 1200px){
-    h1::after{
-        display: none;
-    }
-    .description {
-        font-size: 0.7em;
-        display: inline-block;
-    }
-    p{
-        margin-bottom: 25px;
-        margin-right: 0;
-    }
-    img{
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-    }
-
-  }
-
-
-   */

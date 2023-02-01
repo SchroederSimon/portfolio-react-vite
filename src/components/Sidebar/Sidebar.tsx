@@ -26,9 +26,9 @@ function Sidebar() {
 
     return (
         <motion.div className="sidebar"
-        initial={{ x: -100 }}
+        initial={{ x: -150 }}
         animate={{ x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
         >
             <div className="sidebarIcons">
                 {icons.map((icon) => (

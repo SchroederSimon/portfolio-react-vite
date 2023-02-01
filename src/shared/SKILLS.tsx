@@ -2,27 +2,27 @@ const SKILLS = [
     {
         id: 1,
         nombre: "HTML",
-        level: "Intermediate",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/html.jpg",
     },
 
     {
         id: 2,
         nombre: "CSS",
-        level: "Intermediate",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/css.jpg",
     },
     {
         id: 3,
         nombre: "TypeScript",
-        level: "Intermediate",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/Ts.jpg",
     },
 
     {
         id: 4,
         nombre: "MySql",
-        level: "Basic",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/mysql.jpg",
     },
 
@@ -36,19 +36,19 @@ const SKILLS = [
     {
         id: 6,
         nombre: "Angular",
-        level: "Intermediate",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/angular.jpg",
     },
     {
         id: 13,
         nombre: "React",
-        level: "Intermediate",
+        level: "Beginner",
         imageUrl: "src/assets/imagenes/react.png",
     },
     {
         id: 7,
         nombre: "Node.js",
-        level: "Basic",
+        level: "Beginner",
         imageUrl: "src/assets/imagenes/nodejas.png",
     },
     {
@@ -57,7 +57,12 @@ const SKILLS = [
         level: "Intermediate",
         imageUrl: "src/assets/imagenes/Git.jpg",
     },
-
+    {
+        id: 14,
+        nombre: "MongoDB",
+        level: "Beginner",
+        imageUrl: "src/assets/imagenes/mongoDB.png",
+    },
     {
         id: 9,
         nombre: "English",
@@ -81,7 +86,7 @@ const SKILLS = [
     {
         id: 12,
         nombre: "Figma",
-        level: "Basic",
+        level: "Advanced beginner",
         imageUrl: "src/assets/imagenes/figma.png",
     }
 ];

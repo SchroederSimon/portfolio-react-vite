@@ -22,7 +22,7 @@ function SmallProjects() {
         ref={myRef}
         animate={{ opacity: isVisible ? 1 : 0 }}
         initial={{ opacity: 0 }}
-        transition={{ duration: 4 }}
+        transition={{ duration: 3 }}
         >
             <div
                 className="smallProjectContainer">

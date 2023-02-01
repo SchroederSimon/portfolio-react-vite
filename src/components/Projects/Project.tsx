@@ -12,17 +12,19 @@ function Projects() {
 
     useEffect(() => {
         setProjects(BIG_PROJECTS)
-    }, [])
+    }, []);
 
     //Scroll animation
     const myRef = useRef(null);
     const [isVisible] = useIsVisibleOnScreen(myRef);
 
     return (
-        <motion.div ref={myRef}
+        <motion.div
+            ref={myRef}
             animate={{ opacity: isVisible ? 1 : 0 }}
             initial={{ opacity: 0 }}
-            transition={{ duration: 4 }}>
+            transition={{ duration: 3 }}
+        >
             <div className="projectContainer">
                 <div
                     className="projectText">
@@ -34,7 +36,7 @@ function Projects() {
                             <div key={proyecto.id}
                                 className="projectGrid1">
                                 <div className="projectMedia">
-                                    <iframe width="100%" height="1080" src={proyecto.videoLink}
+                                    <iframe width="98%" height="1080" src={proyecto.videoLink}
                                         title="Project portfolio for Argentina Programa stage 2" frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen></iframe>

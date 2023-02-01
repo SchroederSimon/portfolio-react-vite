@@ -21,7 +21,7 @@ const SMALL_PROJECTS = [
         id: 3,
         title: "Project",
         name: "REST API",
-        description: "REST API with JWT authentication and connected to MySql database (CRUD). This API was linked to toDo project (under construction).",
+        description: "REST API with JWT authentication and connected to MySql database (CRUD). This API will be linked to toDo project (under construction).",
         image: "src/assets/imagenes/todobd.png",
         usedTech: "TS - MySql - Express",
         linkGit: "https://github.com/SchroederSimon/MySql-Jwt-login"

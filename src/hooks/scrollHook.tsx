@@ -25,15 +25,3 @@ function useIsVisibleOnScreen(ref: React.RefObject<HTMLElement>) {
 }
 
 export default useIsVisibleOnScreen;
-
-// const [isVisible, setIsVisible] = useState(false);
-
-// useEffect(() => {
-//     function handleScroll() {
-//         if (window.scrollY) {
-//             setIsVisible(true);
-//         }
-//     }
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-// }, []);

@@ -12,18 +12,18 @@ function Skills() {
 
     useEffect(() => {
         setSkills(SKILLS)
-    }, [])
+    }, []);
 
     //Scroll animation
     const myRef = useRef(null);
     const [isVisible] = useIsVisibleOnScreen(myRef);
-    
+
     return (
         <motion.div className="skillsContainer"
-        ref={myRef}
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 4 }}
+            ref={myRef}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 3 }}
         >
             <h1>Skills</h1>
             <div className="centerSkills">
