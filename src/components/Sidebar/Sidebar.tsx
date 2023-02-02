@@ -7,18 +7,21 @@ const icons = [
         label: 'Linkedin',
         link: 'https://www.linkedin.com/in/simon-schroeder-a2847a1b7/',
         icon: 'fa-linkedin-in',
+        target: "_blank"
     },
     {
         id: 2,
         label: 'Github',
         link: 'https://github.com/SchroederSimon',
         icon: 'fa-github',
+        target: "_blank"
     },
     {
         id: 3,
         label: 'Email',
         link: 'mailto:simon.schroeder.dev@gmail.com',
         icon: 'fa-at',
+        target: ""
     },
 ];
 
@@ -37,7 +40,7 @@ function Sidebar() {
                         whileHover={{ scale: 1.4 }}
                         transition={{ type: "spring", stiffness: 300, damping: 8 }}
                     >
-                        <a aria-label={icon.label} href={icon.link} target="_blank">
+                        <a aria-label={icon.label} href={icon.link} target={icon.target}>
                             <i className={`fa-brands ${icon.icon} fa-2x`} />
                         </a>
                     </motion.li>
