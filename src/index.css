@@ -22,7 +22,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--backgroundBlue);
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Times, serif;
   scroll-behavior: smooth;
 }
 
@@ -42,6 +42,14 @@ h1::after {
   width: 50%;
   height: 1px;
   background-color: white;
+}
+
+h2{
+  font-size: 1.2em;
+}
+
+h3{
+  font-size: 1.5em;
 }
 
 a {
@@ -127,6 +135,10 @@ ul {
     display: none;
   }
 
+  .miroBoard .miroBoardLazy {
+    display: none;
+  }
+
   .navbarContainer {
     position: relative;
   }
@@ -148,3 +160,9 @@ ul {
   }
 
 }
+
+/* Yt iframe */
+.yt-lite > .lty-playbtn {
+  cursor: pointer;
+}
+

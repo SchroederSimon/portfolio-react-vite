@@ -43,7 +43,7 @@ function About() {
                         <li>Always lookin for best solutions.</li>
                     </ul>
                 </div>
-                <img src="src/assets/imagenes/cats.png" alt="" />
+                <img src="src/assets/imagenes/IMG_7231.png" alt="Profile picture" />
             </div>
         </motion.div>
     )

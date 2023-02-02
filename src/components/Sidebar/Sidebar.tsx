@@ -32,9 +32,8 @@ function Sidebar() {
         >
             <div className="sidebarIcons">
                 {icons.map((icon) => (
-                    <ul>
+                    <ul  key={icon.id}>
                     <motion.li
-                        key={icon.id}
                         whileHover={{ scale: 1.4 }}
                         transition={{ type: "spring", stiffness: 300, damping: 8 }}
                     >

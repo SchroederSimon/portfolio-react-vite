@@ -35,28 +35,28 @@ function Hero() {
 
     return (
         <div className="heroContainer">
-            <div className="navbarContainer">
+            <div className="navbarContainer" >
                 <motion.ul className="navbarLinks"
                     initial={{ y: -100 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 1 }}>
                     <li>
-                        <Link offset={-100} smooth spy to="home">
+                        <Link className="linkTo" href="#home" offset={-100} smooth spy to="home" >
                             HOME
                         </Link>
                     </li>
                     <li>
-                        <Link offset={-100} smooth spy to="projects">
+                        <Link className="linkTo" href="#projects" offset={-100} smooth spy to="projects">
                             PROJECTS
                         </Link>
                     </li>
                     <li>
-                        <Link offset={-100} smooth spy to="skills">
+                        <Link className="linkTo" href="#skills" offset={-100} smooth spy to="skills">
                             SKILLS
                         </Link>
                     </li>
                     <li>
-                        <Link offset={-100} smooth spy to="about">
+                        <Link className="linkTo" href="#about" offset={-100} smooth spy to="about">
                             ABOUT
                         </Link>
                     </li>

@@ -72,16 +72,18 @@ function SmallProjects() {
                         and I hope you find it as useful as I do!
                     </p>
                     <div className="miroBoardLazy">
-                        <AnimatePresence>
-                            {!iframeLoaded && (
-                                <button onClick={handleButtonClick}>Load board!</button>
-                            )}
-                            {iframeLoaded && (
-                                <iframe title="My miro board for extra info" width="700" height="600" 
-                                src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" 
+                        {!iframeLoaded && (
+                            <motion.button onClick={handleButtonClick}
+                                whileHover={{ scale: 1.2 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 8 }}
+                            >Load board!</motion.button>
+                        )}
+                        {iframeLoaded && (
+                            <iframe title="My miro board for extra info" width="700" height="600"
+                                src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430"
                                 frameBorder="0" scrolling="no" allowFullScreen />
-                            )}
-                        </AnimatePresence>
+                        )}
+
                     </div>
                 </div>
             </div>

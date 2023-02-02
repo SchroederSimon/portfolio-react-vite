@@ -22,6 +22,7 @@
 .projectLeftInfo {
     grid-area: 1 / 9 / 6 / 13;
     text-align: right;
+    position: relative;
 }
 
 .projectTitle {
@@ -54,6 +55,7 @@
 
 .projectIcons img {
     width: 50%;
+    height: 100%;
 }
 
 /* Media */
@@ -67,6 +69,3 @@
     max-height: 100%;
 }
 
-.projectMedia iframe {
-    height: 70vh;
-}

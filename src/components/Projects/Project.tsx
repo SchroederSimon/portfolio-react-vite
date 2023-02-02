@@ -5,6 +5,10 @@ import BIG_PROJECTS from '../../shared/PROJECTS';
 import { motion } from 'framer-motion';
 import useIsVisibleOnScreen from '../../hooks/scrollHook';
 
+//Video
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+
 
 function Projects() {
 
@@ -36,17 +40,20 @@ function Projects() {
                             <div key={proyecto.id}
                                 className="projectGrid1">
                                 <div className="projectMedia">
-                                    <iframe width="98%" height="1080" src={proyecto.videoLink}
-                                        title={`Project: ${proyecto.name}`} frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen></iframe>
+                                    <LiteYouTubeEmbed
+                                        id={proyecto.videoLink}
+                                        title={proyecto.name}
+                                        poster="sddefault"
+                                        iframeClass="iframe"
+                                        playerClass="lty-playbtn"
+                                    />
                                 </div>
                                 <div className="projectLeftInfo">
                                     <div className="projectTitle">
                                         <a aria-label={`View more about in: ${proyecto.linkDeploy}`} href={proyecto.linkDeploy} target="_blank"><i className="fa-solid fa-arrow-up-right-from-square"></i></a>
                                         <a aria-label={`View more about in: ${proyecto.linkGit}`} href={proyecto.linkGit} target="_blank"><i className="fa-brands fa-github"></i></a>
-                                        <h3>{proyecto.title}</h3>
-                                        <h2>{proyecto.name}</h2>
+                                        <h2>{proyecto.title}</h2>
+                                        <h3>{proyecto.name}</h3>
                                     </div>
                                     <div className="projectDescription">
                                         <p>{proyecto.description}</p>
