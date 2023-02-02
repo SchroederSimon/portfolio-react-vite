@@ -12,7 +12,7 @@ function Footer() {
                     <a aria-label="Github" href="https://github.com/SchroederSimon" target="_blank">
                         <i className="fa-brands fa-github fa-2xl"></i>
                     </a>
-                    <a aria-label="Mail" href="mailto:simon.schroeder.dev@gmail.com" target="_blank">
+                    <a aria-label="Mail" href="mailto:simon.schroeder.dev@gmail.com">
                         <i className="fa-brands fa-at fa-2xl"></i>
                     </a>
                 </li>
