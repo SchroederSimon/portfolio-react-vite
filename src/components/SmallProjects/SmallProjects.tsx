@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { SmallProjectsInterface } from '../../models/smallProjectInterface';
 import '../../components/SmallProjects/SmallProjects.css';
 import SMALL_PROJECTS from '../../shared/SMALLPROJECTS';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import useIsVisibleOnScreen from '../../hooks/scrollHook';
 
 
@@ -17,12 +17,19 @@ function SmallProjects() {
     const myRef = useRef(null);
     const [isVisible] = useIsVisibleOnScreen(myRef);
 
+    const [iframeLoaded, setIframeLoaded] = useState(false);
+
+    const handleButtonClick = () => {
+        setIframeLoaded(true);
+    };
+
+
     return (
         <motion.div
-        ref={myRef}
-        animate={{ opacity: isVisible ? 1 : 0 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 3 }}
+            ref={myRef}
+            animate={{ opacity: isVisible ? 1 : 0 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 3 }}
         >
             <div
                 className="smallProjectContainer">
@@ -37,10 +44,10 @@ function SmallProjects() {
                                     key={proyectoCorto.id}
                                     className="cardContainer">
                                     <div className="information">
-                                        <a href={proyectoCorto.linkGit} target="_blank"><i className="fa-brands fa-github"></i></a>
+                                        <a aria-label={`View more about in: ${proyectoCorto.linkGit}`} href={proyectoCorto.linkGit} target="_blank"><i className="fa-brands fa-github"></i></a>
                                         <h2>{proyectoCorto.name}</h2>
                                         <p>{proyectoCorto.description}</p>
-                                        <img src={proyectoCorto.image} alt="" />
+                                        <img src={proyectoCorto.image} alt={`Image for ${proyectoCorto.name}`} />
                                         <p>{proyectoCorto.usedTech}</p>
                                     </div>
                                 </div>
@@ -64,7 +71,18 @@ function SmallProjects() {
                         with Figma to make my designs come to life. Take a look around,
                         and I hope you find it as useful as I do!
                     </p>
-                    <iframe width="800" height="600" src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+                    <div className="miroBoardLazy">
+                        <AnimatePresence>
+                            {!iframeLoaded && (
+                                <button onClick={handleButtonClick}>Load board!</button>
+                            )}
+                            {iframeLoaded && (
+                                <iframe title="My miro board for extra info" width="700" height="600" 
+                                src="https://miro.com/app/live-embed/uXjVPAqN1pE=/?moveToViewport=9733,1497,4130,2084&embedId=430397728430" 
+                                frameBorder="0" scrolling="no" allowFullScreen />
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
         </motion.div>

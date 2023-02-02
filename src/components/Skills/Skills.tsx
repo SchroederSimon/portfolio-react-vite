@@ -34,7 +34,7 @@ function Skills() {
                             whileHover={{ scale: 1.1 }}
                             transition={{ type: "spring", stiffness: 300, damping: 8 }}
                                 className="skillsImage">
-                                <img src={skill.imageUrl} alt="" className="iconsSkill" />
+                                <img src={skill.imageUrl} alt={`Image for ${skill.nombre}`} className="iconsSkill" />
                                 <div className="imageOverlay imageOverlay--primary">
                                     <div className="imageTitle">
                                         {skill.nombre}

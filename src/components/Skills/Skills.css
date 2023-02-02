@@ -18,7 +18,8 @@
 
 .iconsSkill {
     display: block;
-    height: 100%; 
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 10%;
 }
@@ -67,10 +68,3 @@
 .imageDescription {
     font-size: 1.25em;
 }
-
-/* 
-@media(max-width: 900px){
-    h1::after{
-        display: none;
-    }
-} */

@@ -43,6 +43,7 @@
 
 .information img {
     width: 100%;
+    height: auto;
 }
 
 .information a {
@@ -67,29 +68,24 @@
     padding: 0 2% 0 0;
 }
 
-
-@media(max-width: 900px) {
-    .grid2 {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    }
-
-    h1::after {
-        display: none;
-    }
-
-    .grid1 {
-        grid-template-columns: fit-content(50%);
-    }
-
-    .media {
-        display: none;
-    }
-
-    .miroBoard p {
-        width: 100%;
-    }
-
-    .miroBoard iframe {
-        display: none;
-    }
+.miroBoardLazy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.miroBoardLazy button{
+    margin-top: 15px;
+    bottom: 15%;
+    padding: 2.5%;
+    box-shadow: 3px 4px 0px 0px var(--softBlue);
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--softRed);
+    text-decoration: none;
 }

@@ -32,6 +32,7 @@ function Sidebar() {
         >
             <div className="sidebarIcons">
                 {icons.map((icon) => (
+                    <ul>
                     <motion.li
                         key={icon.id}
                         whileHover={{ scale: 1.4 }}
@@ -41,6 +42,7 @@ function Sidebar() {
                             <i className={`fa-brands ${icon.icon} fa-2x`} />
                         </a>
                     </motion.li>
+                    </ul>
                 ))}
             </div>
         </motion.div>
