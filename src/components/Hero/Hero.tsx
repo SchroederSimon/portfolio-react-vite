@@ -80,7 +80,7 @@ function Hero() {
                     <motion.button
                         whileHover={{ scale: 1.2 }}
                         transition={{ type: "spring", stiffness: 300, damping: 8 }}>
-                        <a href="src/assets/imagenes/Schroeder-Simon-CV.pdf" target="_blank">RESUME</a>
+                        <a href="/Schroeder-Simon-CV.pdf" target="_blank">RESUME</a>
                     </motion.button>
                 </motion.div>
             </motion.div>

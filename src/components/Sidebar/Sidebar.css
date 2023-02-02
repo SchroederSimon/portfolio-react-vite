@@ -23,8 +23,3 @@
     left: 50%;
 }
 
-@media(max-width: 666px) {
-    .Sidebar {
-      display: none;
-    }
-  }

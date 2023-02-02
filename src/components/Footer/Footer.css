@@ -1,0 +1,18 @@
+.footerContainer {
+    display: none;
+  }
+  
+  @media (max-width: 767px) {
+    .footerContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 7vh;
+      width: 100%;
+    }
+    .footerContainer ul li a {
+      color: var(--colorWhite);
+      margin-left: 1rem;
+      padding-bottom: 30px;
+    }
+  }

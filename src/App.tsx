@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import SmallProjects from './components/SmallProjects/SmallProjects'
 import Skills from './components/Skills/Skills'
 import About from './components/About/About'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <SmallProjects />
             <section id="skills"><Skills /></section>
             <section id="about"><About /></section>
+            <section><Footer /></section>
         </>
     )
 }

@@ -16,9 +16,9 @@ const icons = [
     },
     {
         id: 3,
-        label: 'Twitter',
-        link: 'https://twitter.com/SimonD3v',
-        icon: 'fa-twitter',
+        label: 'Email',
+        link: 'href="simon.schroeder.dev@gmail.com',
+        icon: 'fa-at',
     },
 ];
 
