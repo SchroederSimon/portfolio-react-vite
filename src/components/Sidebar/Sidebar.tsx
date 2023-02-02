@@ -21,7 +21,6 @@ const icons = [
         label: 'Email',
         link: 'mailto:simon.schroeder.dev@gmail.com',
         icon: 'fa-at',
-        target: ""
     },
 ];
 
