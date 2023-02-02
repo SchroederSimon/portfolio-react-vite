@@ -17,7 +17,7 @@ const icons = [
     {
         id: 3,
         label: 'Email',
-        link: 'href="simon.schroeder.dev@gmail.com',
+        link: 'mailto:simon.schroeder.dev@gmail.com',
         icon: 'fa-at',
     },
 ];
